@@ -31,5 +31,12 @@ public class YourHero extends AppCompatActivity {
             Toast.makeText(YourHero.this, "I found your secrets!", Toast.LENGTH_SHORT).show();
             startActivity(toPrev);
         });
+
+        Button btnHeroList = findViewById(R.id.btn_heroList);
+        btnHeroList.setOnClickListener(view -> {
+            Intent toHeroList = new Intent(YourHero.this, HeroList.class);
+            Toast.makeText(YourHero.this, "Please Wait!", Toast.LENGTH_SHORT).show();
+            startActivity(toHeroList);
+        });
     }
 }
