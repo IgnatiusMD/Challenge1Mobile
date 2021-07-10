@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Challenge1">
-        <activity android:name=".HeroList"></activity>
+        <activity android:name=".CustomHero"></activity>
+        <activity android:name=".HeroList" />
         <activity android:name=".YourHero" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -38,5 +38,12 @@ public class YourHero extends AppCompatActivity {
             Toast.makeText(YourHero.this, "Please Wait!", Toast.LENGTH_SHORT).show();
             startActivity(toHeroList);
         });
+
+        Button btnCustomHero = findViewById(R.id.btn_customHero);
+        btnCustomHero.setOnClickListener(view -> {
+            Intent toCustomHero = new Intent(YourHero.this, CustomHero.class);
+            Toast.makeText(YourHero.this, "Have Fun Customizing!", Toast.LENGTH_SHORT).show();
+            startActivity(toCustomHero);
+        });
     }
 }

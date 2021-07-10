@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomHero"
+    android:padding="15sp">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"/>
+
+    <TextView
+        android:id="@+id/tv_customHeroTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hero Customization"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:padding="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back"/>
+
+    <TextView
+        android:id="@+id/tv_customHeroName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hero Name:"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_customHeroTitle"/>
+
+    <EditText
+        android:id="@+id/et_customHeroName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hero Name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_customHeroName"/>
+
+    <TextView
+        android:id="@+id/tv_customHeroSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hero Origin:"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_customHeroName"/>
+
+    <EditText
+        android:id="@+id/et_customHeroSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hero Source / Land"
+        app:layout_constraintTop_toBottomOf="@+id/tv_customHeroSource"/>
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert"
+        android:onClick="insertHero"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_customHeroSource"/>
+
+    <TextView
+        android:id="@+id/tv_customSearchHero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Hero Name:"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_insert"/>
+
+    <EditText
+        android:id="@+id/et_customSearchHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hero Name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_customSearchHero"/>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search"
+        android:onClick="searchHero"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_customSearchHero"/>
+
+    <TextView
+        android:id="@+id/tv_sample_heroName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:text="Gatotkaca"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_sample_heroSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="Kamyaka Forest"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sample_heroName"
+        android:textAlignment="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
