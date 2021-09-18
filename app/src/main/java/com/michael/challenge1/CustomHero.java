@@ -45,11 +45,13 @@ public class CustomHero extends AppCompatActivity {
     }
 
     public void insertHero(View view){
-        Hero hero = new Hero(
-                etCustomHeroName.getText().toString(),
-                etCustomHeroSource.getText().toString()
-        );
-        heroesDB.insertHeroes(hero);
+        if (validateBtnInsert()){
+            Hero hero = new Hero(
+                    etCustomHeroName.getText().toString(),
+                    etCustomHeroSource.getText().toString()
+            );
+            heroesDB.insertHeroes(hero);
+        }
         etCustomHeroName.setText("");
         etCustomHeroSource.setText("");
         etCustomSearchHero.setText("");
@@ -63,4 +65,15 @@ public class CustomHero extends AppCompatActivity {
         etCustomHeroSource.setText("");
         etCustomSearchHero.setText("");
     }
+
+    private boolean validateBtnInsert() {
+        if (etCustomHeroName.getText().toString().isEmpty()
+                || etCustomHeroSource.getText().toString().isEmpty()){
+            etCustomHeroName.setError("Hero name must be filled!");
+            etCustomHeroSource.setError("Hero source must be filled!");
+            return false;
+        }
+        return true;
+    }
+
 }
